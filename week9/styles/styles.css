@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -25,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -34,16 +111,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -59,28 +140,28 @@ table {
                 MAIN STYLES
 ********************************************/
 
-html{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container{
+.container {
     /* stop the site from stretching forever */
-    max-width:900px;
-    background-color:burlywood;
+    max-width: 900px;
+    background-color: burlywood;
 
-/* centre the site in the browser */
-margin:0 auto;
-/* when you give margin two values, it means:
+    /* centre the site in the browser */
+    margin: 0 auto;
+    /* when you give margin two values, it means:
     top-bottom
     left-right
 ...so margin:0 auto automatically applies the same margin on either side of the element */
 }
 
-h1{
-    font-size:36px;
-    background-color:aqua;
+h1 {
+    font-size: 36px;
+    background-color: aqua;
     /* margin is the space around an element, between other elements */
-    margin-bottom:10px;
+    margin-bottom: 10px;
     /* padding is the space inside an element, it pushes content away from the edge */
     padding: 10px;
 }
@@ -90,18 +171,46 @@ h1{
 ********************************************/
 
 /* style the a tags inside the nav only */
-nav a{
+nav a {
     /* make the anchor tags block elements (so they behave like divs) */
-    display:block;
-    background-color:cadetblue;
+    display: block;
+    background-color: cadetblue;
     border-top: 2px solid darkblue;
     border-bottom: 2px solid darkblue;
 
-    padding:10px;
-    text-align:center;
+    padding: 10px;
+    text-align: center;
 }
 
 /* hover for anything with a cursor, active for touchscreens */
-nav a:hover{
-    background-color:white;
+nav a:hover,
+nav a:active {
+    background-color: white;
+}
+
+/********************************************
+                MEDIA QUERIES
+********************************************/
+
+@media screen and (min-width:720px){
+
+    /* only apple these styles when the screen is 720px width (minimum) or larger */
+    nav a {
+        float: left;
+        width: 25%;
+        /* use something called box-sizing, which can be used to make the border and padding not count toward the width and height of the element */
+        box-sizing: border-box;
+    }
+
+    main {
+        /* so it fits under the floated stuff */
+        clear: both;
+    }
+}
+
+@media screen and (min-width:900px){
+    /* these styles only apply at 900px and above */
+    nav a{
+        background-color: greenyellow;
+    }
 }
