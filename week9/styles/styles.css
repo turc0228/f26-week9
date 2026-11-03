@@ -55,6 +55,14 @@ table {
 
 /* this is a comment in CSS */
 
+/********************************************
+                MAIN STYLES
+********************************************/
+
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container{
     /* stop the site from stretching forever */
     max-width:900px;
@@ -66,4 +74,34 @@ margin:0 auto;
     top-bottom
     left-right
 ...so margin:0 auto automatically applies the same margin on either side of the element */
+}
+
+h1{
+    font-size:36px;
+    background-color:aqua;
+    /* margin is the space around an element, between other elements */
+    margin-bottom:10px;
+    /* padding is the space inside an element, it pushes content away from the edge */
+    padding: 10px;
+}
+
+/********************************************
+                MOBILE STYLES
+********************************************/
+
+/* style the a tags inside the nav only */
+nav a{
+    /* make the anchor tags block elements (so they behave like divs) */
+    display:block;
+    background-color:cadetblue;
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
+
+    padding:10px;
+    text-align:center;
+}
+
+/* hover for anything with a cursor, active for touchscreens */
+nav a:hover{
+    background-color:white;
 }
